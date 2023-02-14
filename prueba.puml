@@ -1,0 +1,32 @@
+@startuml
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity "Abogado" as e01 {
+  *IdAbogado
+  Nombre
+  Celular
+  Direccion
+  Carnet Identidad
+}
+
+entity "Asunto" as e02 {
+  *Nro Expediente
+  Fecha Inicio 
+  Fecha Finalizacion
+  Estado
+}
+
+entity "Cliente" as e03 {
+  *IdCliente
+  Nombre
+  Celular
+  Direccion
+  Carnet Identidad
+}
+e01 }|..|{ e02
+e02 }|..|| e03
+@enduml
